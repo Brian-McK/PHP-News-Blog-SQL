@@ -1,0 +1,15 @@
+{
+    "version": 3,
+    "mappings": "AGEA,AAAA,MAAM,CAAC;EACH,gBAAgB,EAAE,MAAM;EACxB,KAAK,EAAE,KAAK;CACf",
+    "sources": [
+        "mystyle.scss",
+        "_variables.scss",
+        "_fonts.scss",
+        "_header.scss",
+        "_body.scss",
+        "_sidebar.scss",
+        "_footer.scss"
+    ],
+    "names": [],
+    "file": "mystyle.css"
+}
