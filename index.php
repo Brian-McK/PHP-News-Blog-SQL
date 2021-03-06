@@ -75,16 +75,16 @@ include('includes/header.php');
 <td><img src="image_uploads/<?php echo $blogPost['image']; ?>" width="100px" height="100px" /></td>
 <td><h3><?php echo $blogPost['postTitle'];?></h3></td>
 <td><?php echo $blogPost['postBody']; ?></td>
-<td><form action="delete_record.php" method="post"
-id="delete_record_form">
+<td><form action="delete_blog_post.php" method="post"
+id="delete_blog_post_form">
 <input type="hidden" name="record_id"
 value="<?php echo $blogPost['recordID']; ?>">
 <input type="hidden" name="category_id"
 value="<?php echo $blogPost['categoryID']; ?>">
 <input type="submit" value="Delete">
 </form></td>
-<td><form action="edit_record_form.php" method="post"
-id="delete_record_form">
+<td><form action="edit_blog_post_form.php" method="post"
+id="delete_blog_post_form">
 <input type="hidden" name="record_id"
 value="<?php echo $blogPost['recordID']; ?>">
 <input type="hidden" name="category_id"
@@ -94,7 +94,7 @@ value="<?php echo $blogPost['categoryID']; ?>">
 </tr>
 <?php endforeach; ?>
 </table>
-<p><a href="add_record_form.php">Add Blog Post</a></p>
+<p><a href="add_blog_post_form.php">Add Blog Post</a></p>
 <p><a href="category_list.php">Manage Post Categories</a></p>
 </section>
 <?php
