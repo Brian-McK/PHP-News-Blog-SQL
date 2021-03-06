@@ -3,17 +3,18 @@
 h1 {
   font-size: 150%;
   margin: 0;
-  padding: .5em 0 .25em;
+  padding: 0.5em 0 0.25em;
 }
 
 h2 {
   font-size: 120%;
   margin: 0;
-  padding: .25em 0 .5em;
+  padding: 0.25em 0 0.5em;
 }
 
-h1, h2 {
-  color: #14213D;
+h1,
+h2 {
+  color: #14213d;
   font-family: "Rubik", sans-serif;
 }
 
@@ -36,7 +37,7 @@ nav ul li {
 
 /* Body Styles */
 body {
-  background-color: #E5E5E5;
+  background-color: #e5e5e5;
 }
 
 .container {
@@ -46,12 +47,12 @@ body {
   margin: 0 auto;
   background-color: white;
   border: 1px solid black;
-  padding: .5em 2em;
+  padding: 0.5em 2em;
 }
 
 section {
   float: left;
-  width: 800PX;
+  width: 800px;
   padding-bottom: 1.5em;
 }
 
@@ -79,9 +80,10 @@ table {
   border-collapse: collapse;
 }
 
-td, th {
+td,
+th {
   border: 1px dashed black;
-  padding: .2em .5em .2em .5em;
+  padding: 0.2em 0.5em 0.2em 0.5em;
   vertical-align: top;
   text-align: left;
 }
@@ -108,13 +110,13 @@ br {
 }
 
 #add_blog_post_form {
-  margin: .5em 0 1em;
+  margin: 0.5em 0 1em;
 }
 
 #add_blog_post_form label {
   width: 6em;
   padding-right: 1em;
-  padding-bottom: .5em;
+  padding-bottom: 0.5em;
   float: left;
 }
 
