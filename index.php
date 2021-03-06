@@ -65,16 +65,16 @@ include('includes/header.php');
 <table>
 <tr>
 <th>Image</th>
-<th>Name</th>
-<th>Price</th>
+<th>Post Title</th>
+<th>Post Body</th>
 <th>Delete</th>
 <th>Edit</th>
 </tr>
 <?php foreach ($records as $record) : ?>
 <tr>
 <td><img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" /></td>
-<td><?php echo $record['name']; ?></td>
-<td class="right"><?php echo $record['price']; ?></td>
+<td><h3><?php echo $record['postTitle'];?></h3></td>
+<td><?php echo $record['postBody']; ?></td>
 <td><form action="delete_record.php" method="post"
 id="delete_record_form">
 <input type="hidden" name="record_id"

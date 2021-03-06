@@ -26,12 +26,13 @@ include('includes/header.php');
             <?php endforeach; ?>
             </select>
             <br>
-            <label>Name:</label>
-            <input type="input" name="name">
+            <label>Post Title:</label>
+            <input type="input" name="postTitle">
             <br>
 
-            <label>List Price:</label>
-            <input type="input" name="price">
+            <!-- TODO - SHOULD HAVE A TEXTAREA HERE INSTEAD -->
+            <label>Post Body:</label>
+            <input type="input" name="postBody">
             <br>        
             
             <label>Image:</label>
@@ -39,7 +40,7 @@ include('includes/header.php');
             <br>
             
             <label>&nbsp;</label>
-            <input type="submit" value="Add Record">
+            <input type="submit" value="Add Post">
             <br>
         </form>
         <p><a href="index.php">View Homepage</a></p>

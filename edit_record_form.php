@@ -28,14 +28,14 @@ include('includes/header.php');
                    value="<?php echo $records['categoryID']; ?>">
             <br>
 
-            <label>Name:</label>
-            <input type="input" name="name"
-                   value="<?php echo $records['name']; ?>">
+            <label>Post Title:</label>
+            <input type="input" name="postTitle"
+                   value="<?php echo $records['postTitle']; ?>">
             <br>
 
-            <label>List Price:</label>
-            <input type="input" name="price"
-                   value="<?php echo $records['price']; ?>">
+            <label>Post Body:</label>
+            <input type="input" name="postBody"
+                   value="<?php echo $records['postBody']; ?>">
             <br>
 
             <label>Image:</label>
