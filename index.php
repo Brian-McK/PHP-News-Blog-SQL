@@ -28,14 +28,14 @@ $statement2->execute();
 $categories = $statement2->fetchAll();
 $statement2->closeCursor();
 
-// Get records for selected category
-$queryRecords = "SELECT * FROM records
+// Get blogPosts for selected category
+$queryblogPosts = "SELECT * FROM blogPosts
 WHERE categoryID = :category_id
 ORDER BY recordID";
-$statement3 = $db->prepare($queryRecords);
+$statement3 = $db->prepare($queryblogPosts);
 $statement3->bindValue(':category_id', $category_id);
 $statement3->execute();
-$records = $statement3->fetchAll();
+$blogPosts = $statement3->fetchAll();
 $statement3->closeCursor();
 ?>
 <div class="container">
@@ -46,7 +46,7 @@ include('includes/header.php');
 
 <aside>
 <!-- display a list of categories -->
-<h2>Categories</h2>
+<h2>Post Categories</h2>
 <nav>
 <ul>
 <?php foreach ($categories as $category) : ?>
@@ -60,8 +60,8 @@ include('includes/header.php');
 </aside>
 
 <section>
-<!-- display a table of records -->
-<h2><?php echo $category_name; ?></h2>
+<!-- display a table of blogPosts -->
+<h2><?php echo "Post " . $category_name; ?></h2>
 <table>
 <tr>
 <th>Image</th>
@@ -70,32 +70,32 @@ include('includes/header.php');
 <th>Delete</th>
 <th>Edit</th>
 </tr>
-<?php foreach ($records as $record) : ?>
+<?php foreach ($blogPosts as $blogPost) : ?>
 <tr>
-<td><img src="image_uploads/<?php echo $record['image']; ?>" width="100px" height="100px" /></td>
-<td><h3><?php echo $record['postTitle'];?></h3></td>
-<td><?php echo $record['postBody']; ?></td>
+<td><img src="image_uploads/<?php echo $blogPost['image']; ?>" width="100px" height="100px" /></td>
+<td><h3><?php echo $blogPost['postTitle'];?></h3></td>
+<td><?php echo $blogPost['postBody']; ?></td>
 <td><form action="delete_record.php" method="post"
 id="delete_record_form">
 <input type="hidden" name="record_id"
-value="<?php echo $record['recordID']; ?>">
+value="<?php echo $blogPost['recordID']; ?>">
 <input type="hidden" name="category_id"
-value="<?php echo $record['categoryID']; ?>">
+value="<?php echo $blogPost['categoryID']; ?>">
 <input type="submit" value="Delete">
 </form></td>
 <td><form action="edit_record_form.php" method="post"
 id="delete_record_form">
 <input type="hidden" name="record_id"
-value="<?php echo $record['recordID']; ?>">
+value="<?php echo $blogPost['recordID']; ?>">
 <input type="hidden" name="category_id"
-value="<?php echo $record['categoryID']; ?>">
+value="<?php echo $blogPost['categoryID']; ?>">
 <input type="submit" value="Edit">
 </form></td>
 </tr>
 <?php endforeach; ?>
 </table>
-<p><a href="add_record_form.php">Add Record</a></p>
-<p><a href="category_list.php">Manage Categories</a></p>
+<p><a href="add_record_form.php">Add Blog Post</a></p>
+<p><a href="category_list.php">Manage Post Categories</a></p>
 </section>
 <?php
 include('includes/footer.php');

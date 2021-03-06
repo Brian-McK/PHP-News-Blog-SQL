@@ -1,6 +1,6 @@
 <?php
 
-// Get the record data
+// Get the blogPosts data
 $record_id = filter_input(INPUT_POST, 'record_id', FILTER_VALIDATE_INT);
 $category_id = filter_input(INPUT_POST, 'category_id', FILTER_VALIDATE_INT);
 $postTitle = filter_input(INPUT_POST, 'postTitle');
@@ -45,10 +45,10 @@ $image = $original_image; // old image from database
 
 /************************** End Image upload **************************/
 
-// If valid, update the record in the database
+// If valid, update the blogPost in the database
 require_once('database.php');
 
-$query = 'UPDATE records
+$query = 'UPDATE blogPosts
 SET categoryID = :category_id,
 postTitle = :postTitle,
 postBody = :postBody,

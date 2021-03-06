@@ -18,10 +18,10 @@ INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
 (3, 'Category 3');
 
 --
--- Table structure for table `records`
+-- Table structure for table `blogPosts`
 --
 
-CREATE TABLE `records` (
+CREATE TABLE `blogPosts` (
   `recordID` int(11) NOT NULL,
   `categoryID` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
@@ -30,10 +30,10 @@ CREATE TABLE `records` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `records`
+-- Dumping data for table `blogPosts`
 --
 
-INSERT INTO `records` (`recordID`, `categoryID`, `name`, `price`, `image`) VALUES
+INSERT INTO `blogPosts` (`recordID`, `categoryID`, `name`, `price`, `image`) VALUES
 (1, 1, 'Some text', '12.00', '644471.jpg'),
 (2, 1, 'Some text', '15.00', '233012.jpg'),
 (3, 1, 'Some text', '18.00', '329484.jpg'),
@@ -52,9 +52,9 @@ INSERT INTO `records` (`recordID`, `categoryID`, `name`, `price`, `image`) VALUE
 --
 
 --
--- Indexes for table `records`
+-- Indexes for table `blogPosts`
 --
-ALTER TABLE `records`
+ALTER TABLE `blogPosts`
   ADD PRIMARY KEY (`recordID`);
 
 --
@@ -62,7 +62,7 @@ ALTER TABLE `records`
 --
 
 --
--- AUTO_INCREMENT for table `records`
+-- AUTO_INCREMENT for table `blogPosts`
 --
-ALTER TABLE `records`
+ALTER TABLE `blogPosts`
   MODIFY `recordID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;

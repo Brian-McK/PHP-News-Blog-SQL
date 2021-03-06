@@ -62,7 +62,7 @@ if ($category_id == null || $category_id == false ||
     require_once('database.php');
 
     // Add the product to the database 
-    $query = "INSERT INTO records
+    $query = "INSERT INTO blogPosts
                  (categoryID, postTitle, postBody, image)
               VALUES
                  (:category_id, :postTitle, :postBody, :image)";
