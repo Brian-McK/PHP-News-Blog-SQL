@@ -11,6 +11,8 @@ if (!isset($category_id)) {
     if ($category_id == NULL || $category_id == FALSE) {
         $category_id = 1;
     }
+
+    // ABOVE CODE NEEDS TO BE FIXED
 }
 
 // Get name for current category
@@ -40,7 +42,19 @@ $statement3->bindValue(':category_id', $category_id);
 $statement3->execute();
 $blogPosts = $statement3->fetchAll();
 $statement3->closeCursor();
+
+// // Get all blogPosts
+// $queryblogPosts = "SELECT * FROM blogPosts
+// WHERE categoryID = :category_id
+// ORDER BY recordID";
+// $statement3 = $db->prepare($queryblogPosts);
+// $statement3->bindValue(':category_id', $category_id);
+// $statement3->execute();
+// $blogPosts = $statement3->fetchAll();
+// $statement3->closeCursor();
 ?>
+
+
 <div class="container">
     <?php
     include('includes/header.php');
@@ -70,6 +84,8 @@ $statement3->closeCursor();
                 <th>Image</th>
                 <th>Post Title</th>
                 <th>Post Body</th>
+                <th>Date Posted</th>
+                <th>Time Posted</th>
                 <th>Delete</th>
                 <th>Edit</th>
             </tr>
@@ -80,6 +96,9 @@ $statement3->closeCursor();
                         <h3><?php echo $blogPost['postTitle']; ?></h3>
                     </td>
                     <td><?php echo $blogPost['postBody']; ?></td>
+                    <td><?php echo "Date Posted: " . date('d/m/Y',strtotime($blogPost['dateTime'])); ?></td>
+                    <td><?php echo "Time Posted: " . date('H:i:s',strtotime($blogPost['dateTime'])); ?></td>
+                  
                     <td>
                         <form action="delete_blog_post.php" method="post" id="delete_blog_post_form">
                             <input type="hidden" name="record_id" value="<?php echo $blogPost['recordID']; ?>">
