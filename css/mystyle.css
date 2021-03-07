@@ -3,18 +3,17 @@
 h1 {
   font-size: 150%;
   margin: 0;
-  padding: 0.5em 0 0.25em;
+  padding: .5em 0 .25em;
 }
 
 h2 {
   font-size: 120%;
   margin: 0;
-  padding: 0.25em 0 0.5em;
+  padding: .25em 0 .5em;
 }
 
-h1,
-h2 {
-  color: #14213d;
+h1, h2 {
+  color: #14213D;
   font-family: "Rubik", sans-serif;
 }
 
@@ -23,6 +22,23 @@ header {
   background-color: yellow;
   margin: 0;
   border-bottom: 2px solid black;
+}
+
+/* Body Styles */
+body {
+  background-color: #E5E5E5;
+  border: 2px solid red;
+}
+
+.container {
+  /* margin-top: 0; */
+  font-family: Arial, Helvetica, sans-serif;
+  width: 1000px;
+  margin: 0 auto;
+  background-color: white;
+  border: 1px solid black;
+  padding: 0.5em 2em;
+  border: 2px solid red;
 }
 
 nav ul {
@@ -35,35 +51,23 @@ nav ul li {
   padding-bottom: 0.5em;
 }
 
-/* Body Styles */
-body {
-  background-color: #e5e5e5;
-}
-
-.container {
-  /* margin-top: 0; */
-  font-family: Arial, Helvetica, sans-serif;
-  width: 1000px;
-  margin: 0 auto;
-  background-color: white;
-  border: 1px solid black;
-  padding: 0.5em 2em;
-}
-
 section {
   float: left;
   width: 800px;
   padding-bottom: 1.5em;
+  border: 2px solid blue;
 }
 
 ul {
   margin: 0 0 1em 0;
   padding: 0 0 0 2.5em;
+  border: 2px solid green;
 }
 
 li {
   margin: 0;
   padding: 0;
+  border: 2px solid green;
 }
 
 a {
@@ -78,6 +82,7 @@ a:hover {
 table {
   border: 1px solid black;
   border-collapse: collapse;
+  border: 2px solid pink;
 }
 
 td,
@@ -139,11 +144,13 @@ footer {
   clear: both;
   margin-top: 1em;
   border-top: 2px solid black;
+  border: 2px solid yellowgreen;
 }
 
 footer p {
   text-align: right;
   font-size: 80%;
   margin: 1em 0;
+  border: 2px solid yellowgreen;
 }
 /*# sourceMappingURL=mystyle.css.map */

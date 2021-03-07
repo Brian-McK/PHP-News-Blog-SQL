@@ -2,6 +2,7 @@
 
 body {
   background-color: $lightSlateGrey;
+  border: 2px solid red;
 }
 
 .container {
@@ -12,21 +13,37 @@ body {
   background-color: white;
   border: 1px solid black;
   padding: 0.5em 2em;
+  border: 2px solid red;
+}
+
+nav {
+  ul {
+      list-style-type: none;
+      margin-left: 0;
+      padding-left: 0;
+      
+      li {
+          padding-bottom: 0.5em;
+      }
+  }
 }
 
 section {
   float: left;
   width: 800px;
   padding-bottom: 1.5em;
+  border: 2px solid blue;
 }
 
 ul {
   margin: 0 0 1em 0;
   padding: 0 0 0 2.5em;
+  border: 2px solid green;
 }
 li {
   margin: 0;
   padding: 0;
+  border: 2px solid green;
 }
 a {
   color: rgb(41, 64, 124);
@@ -38,6 +55,7 @@ a:hover {
 table {
   border: 1px solid black;
   border-collapse: collapse;
+  border: 2px solid pink;
 }
 td,
 th {
