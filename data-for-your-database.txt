@@ -4,7 +4,7 @@
 --
 
 CREATE TABLE `categories` (
-  `categoryID` int(11) NOT NULL,
+  `categoryID` int(11) NOT NULL AUTO_INCREMENT,
   `categoryName` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -13,19 +13,20 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
-(1, 'Category 1'),
-(2, 'Category 2'),
-(3, 'Category 3');
+(1, 'Latest Football News'),
+(2, 'Latest Celeb News'),
+(3, 'Latest World News');
 
 --
 -- Table structure for table `blogPosts`
 --
 
 CREATE TABLE `blogPosts` (
-  `recordID` int(11) NOT NULL,
+  `recordID` int(11) NOT NULL AUTO_INCREMENT,
   `categoryID` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `price` decimal(10,2) NOT NULL,
+  `postTitle` varchar(200) NOT NULL,
+  `postBody` varchar(2000) NOT NULL,
+  `dateTime` timestamp CURRENT_TIMESTAMP,
   `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -33,19 +34,19 @@ CREATE TABLE `blogPosts` (
 -- Dumping data for table `blogPosts`
 --
 
-INSERT INTO `blogPosts` (`recordID`, `categoryID`, `name`, `price`, `image`) VALUES
-(1, 1, 'Some text', '12.00', '644471.jpg'),
-(2, 1, 'Some text', '15.00', '233012.jpg'),
-(3, 1, 'Some text', '18.00', '329484.jpg'),
-(4, 1, 'Some text', '10.00', '644055.jpg'),
-(5, 2, 'Some text', '16.00', '373465.jpg'),
-(6, 2, 'Some text', '19.00', '373989.jpg'),
-(7, 2, 'Some text', '12.00', '374104.jpg'),
-(8, 2, 'Some text', '10.00', '4733.jpg'),
-(9, 2, 'Some text', '15.00', '834551.jpg'),
-(10, 3, 'Some text', '13.00', '908783.jpg'),
-(11, 3, 'Some text', '17.00', '835545.jpg'),
-(12, 3, 'Some text', '19.00', '119273.jpg');
+INSERT INTO `blogPosts` (`recordID`, `categoryID`, `postTitle`, `postBody`, `image`) VALUES
+(1, 1, 'David Beckham Wins A Prize', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '644471.jpg'),
+(2, 1, 'Messi Vs Ronaldo?', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '233012.jpg'),
+(3, 1, 'Will Liverpool Win The Title?', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '329484.jpg'),
+(4, 1, 'Is their too much money in football?', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '644055.jpg'),
+(5, 2, 'Peter Andre Arrested', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '373465.jpg'),
+(6, 2, 'Ant & Dec show cancelled', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '373989.jpg'),
+(7, 2, 'Madonna has lost the plot', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '374104.jpg'),
+(8, 2, 'Beyonce cant handle this', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '4733.jpg'),
+(9, 2, 'Bono is a header', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '834551.jpg'),
+(10, 3, 'USA politics', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '908783.jpg'),
+(11, 3, 'Middle East politics ', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '835545.jpg'),
+(12, 3, 'European Politics', 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.', '119273.jpg');
 
 --
 -- Indexes for dumped tables
