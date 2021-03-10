@@ -60,11 +60,9 @@ $statement4->closeCursor();
     ?>
     <div class="main-container-header">
 
-        <h1 class="tac">Record List</h1>
+        <h1 class="tac">Categories</h1>
 
         <div class="category-navigation">
-        <!-- display a list of categories -->
-        <h1>Post Categories</h1>
         <nav>
             <ul>
                 <?php foreach ($categories as $category) : ?>

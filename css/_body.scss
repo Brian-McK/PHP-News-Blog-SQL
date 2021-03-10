@@ -16,21 +16,38 @@ body {
       background-color: $darkYellow;
       padding: 10px;
       h1 {
+        font-size: 200%;
         color: white;
       }
 
       .category-navigation {
-        border: 2px solid black;
+        width: 60%;
+        margin: 0 auto;
         nav {
-          background-color: white;
-          border: 2px solid black;
           ul {
-            margin-left: 0;
-            padding-left: 0;
-            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-top: 10px;
+
+            li:hover {
+              background-color: $lightSlateGrey;
+
+              a {
+                color: $darkNavy;
+              }
+            }
+
             li {
               margin: 5px;
               border: 2px solid black;
+              background-color: $darkNavy;
+              border-radius: 20px;
+              padding: 10px;
+
+              a {
+                color: white;
+              }
             }
           }
         }
