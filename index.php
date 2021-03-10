@@ -43,27 +43,28 @@ $statement3->execute();
 $blogPosts = $statement3->fetchAll();
 $statement3->closeCursor();
 
-// // Get all blogPosts
-// $queryblogPosts = "SELECT * FROM blogPosts
-// WHERE categoryID = :category_id
-// ORDER BY recordID";
-// $statement3 = $db->prepare($queryblogPosts);
-// $statement3->bindValue(':category_id', $category_id);
-// $statement3->execute();
-// $blogPosts = $statement3->fetchAll();
-// $statement3->closeCursor();
+// Get a blogPost by name in category
+$queryblogPostsByName = "SELECT * FROM blogPosts
+WHERE categoryID = :category_id AND postTitle = :post_title
+ORDER BY recordID";
+$statement4 = $db->prepare($queryblogPosts);
+$statement4->execute(array(':category_id' => $category_id, ':post_title' => $post_title));
+$blogPostsByName = $statement4->fetchAll();
+$statement4->closeCursor();
+
 ?>
 
-
-<div class="container">
+<div class="main-container">
     <?php
     include('includes/header.php');
     ?>
-    <h1>Record List</h1>
+    <div class="main-container-header">
 
-    <aside>
+        <h1 class="tac">Record List</h1>
+
+        <div class="category-navigation">
         <!-- display a list of categories -->
-        <h2>Post Categories</h2>
+        <h1>Post Categories</h1>
         <nav>
             <ul>
                 <?php foreach ($categories as $category) : ?>
@@ -74,51 +75,55 @@ $statement3->closeCursor();
                 <?php endforeach; ?>
             </ul>
         </nav>
-    </aside>
+    </div>
+    </div>
 
-    <section>
-        <!-- display a table of blogPosts -->
-        <h2><?php echo "Post " . $category_name; ?></h2>
-        <table>
+
+    
+
+
+    <!-- display a table of blogPosts -->
+    <h2><?php echo "Post " . $category_name; ?></h2>
+    <table>
+        <tr>
+            <th>Image</th>
+            <th>Post Title</th>
+            <th>Post Body</th>
+            <th>Date Posted</th>
+            <th>Time Posted</th>
+            <th>Delete</th>
+            <th>Edit</th>
+        </tr>
+        <?php foreach ($blogPosts as $blogPost) : ?>
             <tr>
-                <th>Image</th>
-                <th>Post Title</th>
-                <th>Post Body</th>
-                <th>Date Posted</th>
-                <th>Time Posted</th>
-                <th>Delete</th>
-                <th>Edit</th>
+                <td><img src="image_uploads/<?php echo $blogPost['image']; ?>" width="100px" height="100px" /></td>
+                <td>
+                    <h3><?php echo $blogPost['postTitle']; ?></h3>
+                </td>
+                <td><?php echo $blogPost['postBody']; ?></td>
+                <td><?php echo "Date Posted: " . date('d/m/Y', strtotime($blogPost['dateTime'])); ?></td>
+                <td><?php echo "Time Posted: " . date('H:i:s', strtotime($blogPost['dateTime'])); ?></td>
+                <td>
+                    <form action="delete_blog_post.php" method="post" id="delete_blog_post_form">
+                        <input type="hidden" name="record_id" value="<?php echo $blogPost['recordID']; ?>">
+                        <input type="hidden" name="category_id" value="<?php echo $blogPost['categoryID']; ?>">
+                        <input type="submit" value="Delete">
+                    </form>
+                </td>
+                <td>
+                    <form action="edit_blog_post_form.php" method="post" id="delete_blog_post_form">
+                        <input type="hidden" name="record_id" value="<?php echo $blogPost['recordID']; ?>">
+                        <input type="hidden" name="category_id" value="<?php echo $blogPost['categoryID']; ?>">
+                        <input type="submit" value="Edit">
+                    </form>
+                </td>
             </tr>
-            <?php foreach ($blogPosts as $blogPost) : ?>
-                <tr>
-                    <td><img src="image_uploads/<?php echo $blogPost['image']; ?>" width="100px" height="100px" /></td>
-                    <td>
-                        <h3><?php echo $blogPost['postTitle']; ?></h3>
-                    </td>
-                    <td><?php echo $blogPost['postBody']; ?></td>
-                    <td><?php echo "Date Posted: " . date('d/m/Y',strtotime($blogPost['dateTime'])); ?></td>
-                    <td><?php echo "Time Posted: " . date('H:i:s',strtotime($blogPost['dateTime'])); ?></td>
-                  
-                    <td>
-                        <form action="delete_blog_post.php" method="post" id="delete_blog_post_form">
-                            <input type="hidden" name="record_id" value="<?php echo $blogPost['recordID']; ?>">
-                            <input type="hidden" name="category_id" value="<?php echo $blogPost['categoryID']; ?>">
-                            <input type="submit" value="Delete">
-                        </form>
-                    </td>
-                    <td>
-                        <form action="edit_blog_post_form.php" method="post" id="delete_blog_post_form">
-                            <input type="hidden" name="record_id" value="<?php echo $blogPost['recordID']; ?>">
-                            <input type="hidden" name="category_id" value="<?php echo $blogPost['categoryID']; ?>">
-                            <input type="submit" value="Edit">
-                        </form>
-                    </td>
-                </tr>
-            <?php endforeach; ?>
-        </table>
-        <p><a href="add_blog_post_form.php">Add Blog Post</a></p>
-        <p><a href="category_list.php">Manage Post Categories</a></p>
+        <?php endforeach; ?>
+    </table>
+    <p><a href="add_blog_post_form.php">Add Blog Post</a></p>
+    <p><a href="category_list.php">Manage Post Categories</a></p>
     </section>
-    <?php
-    include('includes/footer.php');
-    ?>
+</div>
+<?php
+include('includes/footer.php');
+?>
