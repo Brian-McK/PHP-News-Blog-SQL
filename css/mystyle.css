@@ -114,6 +114,26 @@ header .fa-newspaper-o {
   text-align: center;
 }
 
+.m-10px {
+  margin: 10px;
+}
+
+.m-20px {
+  margin: 20px;
+}
+
+.font-150 {
+  font-size: 150%;
+}
+
+.font-200 {
+  font-size: 200%;
+}
+
+body {
+  background-color: #E5E5E5;
+}
+
 body .main-container {
   font-family: Arial, Helvetica, sans-serif;
   width: 100%;
@@ -168,6 +188,34 @@ body .main-container .main-container-header .category-navigation nav ul li {
 
 body .main-container .main-container-header .category-navigation nav ul li a {
   color: white;
+}
+
+body .main-container .blog-posts-container {
+  border: 2px solid red;
+}
+
+body .main-container .blog-posts-container .blog-post-item {
+  border: 2px solid black;
+}
+
+body .main-container .blog-posts-container .blog-post-item .blog-post-heading {
+  border: 2px solid green;
+}
+
+body .main-container .blog-posts-container .blog-post-item .blog-post-image {
+  border: 2px solid green;
+}
+
+body .main-container .blog-posts-container .blog-post-item .blog-post-body {
+  border: 2px solid green;
+}
+
+body .main-container .blog-posts-container .blog-post-item .blog-post-date-time {
+  border: 2px solid green;
+}
+
+body .main-container .blog-posts-container .blog-post-item .blog-post-edit-delete {
+  border: 2px solid green;
 }
 
 body .main-container section {

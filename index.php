@@ -63,25 +63,43 @@ $statement4->closeCursor();
         <h1 class="tac">Categories</h1>
 
         <div class="category-navigation">
-        <nav>
-            <ul>
-                <?php foreach ($categories as $category) : ?>
-                    <li><a href=".?category_id=<?php echo $category['categoryID']; ?>">
-                            <?php echo $category['categoryName']; ?>
-                        </a>
-                    </li>
-                <?php endforeach; ?>
-            </ul>
-        </nav>
+            <nav>
+                <ul>
+                    <?php foreach ($categories as $category) : ?>
+                        <li><a href=".?category_id=<?php echo $category['categoryID']; ?>">
+                                <?php echo $category['categoryName']; ?>
+                            </a>
+                        </li>
+                    <?php endforeach; ?>
+                </ul>
+            </nav>
+        </div>
     </div>
-    </div>
-
-
-    
 
 
     <!-- display a table of blogPosts -->
-    <h2><?php echo "Post " . $category_name; ?></h2>
+    <h1 class="tac font-150 m-20px"><?php echo "Category: " . $category_name; ?></h1>
+
+    <div class="blog-posts-container">
+        <div class="blog-post-item">
+            blog-post-item
+            <div class="blog-post-heading">
+                blog-post-heading
+            </div>
+            <div class="blog-post-image">
+                blog-post-image
+            </div>
+            <div class="blog-post-body">
+                blog-post-body
+            </div>
+            <div class="blog-post-date-time">
+                blog-post-date-time
+            </div>
+            <div class="blog-post-edit-delete">
+                blog-post-edit-delete
+            </div>
+        </div>
+    </div>
     <table>
         <tr>
             <th>Image</th>
