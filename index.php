@@ -76,18 +76,16 @@ $statement4->closeCursor();
         </div>
     </div>
 
-
-    <!-- display a table of blogPosts -->
-    <h1 class="tac font-150 m-20px"><?php echo "Category: " . $category_name; ?></h1>
+    <h1 class="tac font-150 m-40px"><?php echo "Category: " . $category_name; ?></h1>
 
     <div class="blog-posts-container">
         <?php foreach ($blogPosts as $blogPost) : ?>
-            <div class="blog-post-item">
+            <div class="blog-post-item box-shadow">
+                <div class="blog-post-image">
+                    <img src="image_uploads/<?php echo $blogPost['image']; ?>" />
+                </div>
                 <div class="blog-post-heading">
                     <h3><?php echo $blogPost['postTitle']; ?></h3>
-                </div>
-                <div class="blog-post-image">
-                    <img src="image_uploads/<?php echo $blogPost['image']; ?>" width="100px" height="100px" />
                 </div>
                 <div class="blog-post-body">
                     <p><?php echo $blogPost['postBody']; ?></p>
@@ -115,9 +113,10 @@ $statement4->closeCursor();
             </div>
         <?php endforeach; ?>
     </div>
+    <div class="add-blog-post-manage-categories">
     <p><a href="add_blog_post_form.php">Add Blog Post</a></p>
     <p><a href="category_list.php">Manage Post Categories</a></p>
-    </section>
+    </div>
 </div>
 <?php
 include('includes/footer.php');
