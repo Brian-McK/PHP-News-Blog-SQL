@@ -81,61 +81,40 @@ $statement4->closeCursor();
     <h1 class="tac font-150 m-20px"><?php echo "Category: " . $category_name; ?></h1>
 
     <div class="blog-posts-container">
-        <div class="blog-post-item">
-            blog-post-item
-            <div class="blog-post-heading">
-                blog-post-heading
-            </div>
-            <div class="blog-post-image">
-                blog-post-image
-            </div>
-            <div class="blog-post-body">
-                blog-post-body
-            </div>
-            <div class="blog-post-date-time">
-                blog-post-date-time
-            </div>
-            <div class="blog-post-edit-delete">
-                blog-post-edit-delete
-            </div>
-        </div>
-    </div>
-    <table>
-        <tr>
-            <th>Image</th>
-            <th>Post Title</th>
-            <th>Post Body</th>
-            <th>Date Posted</th>
-            <th>Time Posted</th>
-            <th>Delete</th>
-            <th>Edit</th>
-        </tr>
         <?php foreach ($blogPosts as $blogPost) : ?>
-            <tr>
-                <td><img src="image_uploads/<?php echo $blogPost['image']; ?>" width="100px" height="100px" /></td>
-                <td>
+            <div class="blog-post-item">
+                <div class="blog-post-heading">
                     <h3><?php echo $blogPost['postTitle']; ?></h3>
-                </td>
-                <td><?php echo $blogPost['postBody']; ?></td>
-                <td><?php echo "Date Posted: " . date('d/m/Y', strtotime($blogPost['dateTime'])); ?></td>
-                <td><?php echo "Time Posted: " . date('H:i:s', strtotime($blogPost['dateTime'])); ?></td>
-                <td>
-                    <form action="delete_blog_post.php" method="post" id="delete_blog_post_form">
-                        <input type="hidden" name="record_id" value="<?php echo $blogPost['recordID']; ?>">
-                        <input type="hidden" name="category_id" value="<?php echo $blogPost['categoryID']; ?>">
-                        <input type="submit" value="Delete">
-                    </form>
-                </td>
-                <td>
-                    <form action="edit_blog_post_form.php" method="post" id="delete_blog_post_form">
-                        <input type="hidden" name="record_id" value="<?php echo $blogPost['recordID']; ?>">
-                        <input type="hidden" name="category_id" value="<?php echo $blogPost['categoryID']; ?>">
-                        <input type="submit" value="Edit">
-                    </form>
-                </td>
-            </tr>
+                </div>
+                <div class="blog-post-image">
+                    <img src="image_uploads/<?php echo $blogPost['image']; ?>" width="100px" height="100px" />
+                </div>
+                <div class="blog-post-body">
+                    <p><?php echo $blogPost['postBody']; ?></p>
+                </div>
+                <div class="blog-post-date-time">
+                    <h3><?php echo "Date Posted: " . date('d/m/Y', strtotime($blogPost['dateTime'])); ?></h3>
+                    <h3><?php echo "Time Posted: " . date('H:i:s', strtotime($blogPost['dateTime'])); ?></h3>
+                </div>
+                <div class="blog-post-edit-delete">
+                    <div class="blog-post-edit">
+                        <form action="edit_blog_post_form.php" method="post" id="delete_blog_post_form">
+                            <input type="hidden" name="record_id" value="<?php echo $blogPost['recordID']; ?>">
+                            <input type="hidden" name="category_id" value="<?php echo $blogPost['categoryID']; ?>">
+                            <input type="submit" value="Edit">
+                        </form>
+                    </div>
+                    <div class="blog-post-delete">
+                        <form action="delete_blog_post.php" method="post" id="delete_blog_post_form">
+                            <input type="hidden" name="record_id" value="<?php echo $blogPost['recordID']; ?>">
+                            <input type="hidden" name="category_id" value="<?php echo $blogPost['categoryID']; ?>">
+                            <input type="submit" value="Delete">
+                        </form>
+                    </div>
+                </div>
+            </div>
         <?php endforeach; ?>
-    </table>
+    </div>
     <p><a href="add_blog_post_form.php">Add Blog Post</a></p>
     <p><a href="category_list.php">Manage Post Categories</a></p>
     </section>
