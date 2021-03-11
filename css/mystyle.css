@@ -199,8 +199,33 @@ body .main-container .main-container-header .category-navigation nav ul li a {
   color: white;
 }
 
+body .main-container .add-blog-post:hover {
+  background-color: #E5E5E5;
+}
+
+body .main-container .add-blog-post:hover a {
+  color: #14213D;
+}
+
+body .main-container .add-blog-post {
+  margin: 20px auto;
+  border: 2px solid black;
+  background-color: #14213d;
+  border-radius: 20px;
+  padding: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+}
+
+body .main-container .add-blog-post a {
+  color: white;
+}
+
 body .main-container .blog-posts-container {
   width: 100%;
+  padding-bottom: 40px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -278,21 +303,9 @@ body .main-container .blog-posts-container .blog-post-item .blog-post-edit-delet
   margin-left: 10px;
 }
 
-body .main-container section {
-  float: left;
-  width: 800px;
-  padding-bottom: 1.5em;
-  border: 2px solid blue;
-}
-
 body .main-container a {
-  color: #29407c;
   font-weight: bold;
   text-decoration: none;
-}
-
-body .main-container a:hover {
-  color: #d08504;
 }
 
 body .main-container table {
@@ -351,7 +364,6 @@ body .main-container #add_blog_post_form input[text] {
 /* Footer Styles */
 footer {
   clear: both;
-  margin-top: 1em;
   border-top: 2px solid black;
   border: 2px solid yellowgreen;
 }

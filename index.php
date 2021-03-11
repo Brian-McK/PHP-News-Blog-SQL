@@ -65,6 +65,7 @@ $statement4->closeCursor();
         <div class="category-navigation">
             <nav>
                 <ul>
+                    <li><a href="category_list.php">Manage Post Categories</a></li>
                     <?php foreach ($categories as $category) : ?>
                         <li><a href=".?category_id=<?php echo $category['categoryID']; ?>">
                                 <?php echo $category['categoryName']; ?>
@@ -76,7 +77,12 @@ $statement4->closeCursor();
         </div>
     </div>
 
-    <h1 class="tac font-150 m-40px"><?php echo "Category: " . $category_name; ?></h1>
+    <h1 class="tac font-150 m-20px"><?php echo "Category: " . $category_name; ?></h1>
+
+    <div class="add-blog-post tac font-120">
+        <a href="add_blog_post_form.php">Add Blog Post</a>
+    </div>
+
 
     <div class="blog-posts-container">
         <?php foreach ($blogPosts as $blogPost) : ?>
@@ -112,10 +118,6 @@ $statement4->closeCursor();
                 </div>
             </div>
         <?php endforeach; ?>
-    </div>
-    <div class="add-blog-post-manage-categories">
-    <p><a href="add_blog_post_form.php">Add Blog Post</a></p>
-    <p><a href="category_list.php">Manage Post Categories</a></p>
     </div>
 </div>
 <?php
