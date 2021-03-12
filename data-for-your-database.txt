@@ -13,9 +13,9 @@ CREATE TABLE `categories` (
 --
 
 INSERT INTO `categories` (`categoryID`, `categoryName`) VALUES
-(1, 'Latest Football News'),
-(2, 'Latest Celeb News'),
-(3, 'Latest World News');
+(1, 'Football News'),
+(2, 'Celeb News'),
+(3, 'World News');
 
 --
 -- Table structure for table `blogPosts`
