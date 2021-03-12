@@ -140,11 +140,10 @@ header .fa-newspaper-o {
 }
 
 body {
-  background-color: #E5E5E5;
+  font-family: "Rubik", sans-serif;
 }
 
 body .main-container {
-  font-family: Arial, Helvetica, sans-serif;
   width: 100%;
   margin: 0 auto;
   background-color: white;
@@ -232,6 +231,7 @@ body .main-container .blog-posts-container {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 50px 10px;
+  margin-bottom: 40px;
 }
 
 body .main-container .blog-posts-container .blog-post-item {
@@ -322,10 +322,6 @@ body .main-container th {
   text-align: left;
 }
 
-body .main-container form {
-  margin: 0;
-}
-
 body .main-container br {
   clear: left;
 }
@@ -342,15 +338,62 @@ body .main-container .margin_top_increase {
   margin-top: 1em;
 }
 
+body .main-container .form-container {
+  width: 50%;
+  margin: 0 auto;
+  padding: 30px;
+  font-family: "Rubik", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 100px;
+}
+
+body .main-container .form-container .pushdown {
+  margin-bottom: 30px;
+}
+
+body .main-container .view-home-page:hover {
+  background-color: #E5E5E5;
+}
+
+body .main-container .view-home-page:hover a {
+  color: #14213D;
+}
+
+body .main-container .view-home-page {
+  margin: 10px auto;
+  border: 2px solid black;
+  background-color: #14213d;
+  border-radius: 20px;
+  padding: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+body .main-container .view-home-page a {
+  color: white;
+}
+
 body .main-container #add_blog_post_form {
-  margin: 0.5em 0 1em;
+  margin: 0 auto;
+  padding: 30px;
+  border: 5px solid #FCA311;
+  border-radius: 20px;
+}
+
+body .main-container #add_blog_post_form p {
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 body .main-container #add_blog_post_form label {
-  width: 6em;
-  padding-right: 1em;
-  padding-bottom: 0.5em;
+  width: 8em;
+  padding-right: 0em;
+  padding-bottom: 1.5em;
   float: left;
+  font-weight: bold;
 }
 
 body .main-container #add_blog_post_form input {
@@ -361,17 +404,87 @@ body .main-container #add_blog_post_form input[text] {
   width: 15em;
 }
 
-/* Footer Styles */
-footer {
-  clear: both;
-  border-top: 2px solid black;
-  border: 2px solid yellowgreen;
+body .main-container .add-category-form-container {
+  margin: 50px;
+  padding: 20px;
+  width: 50%;
+  margin: 40 auto;
+  border: 5px solid #FCA311;
+  border-radius: 20px;
 }
 
-footer p {
-  text-align: right;
-  font-size: 80%;
-  margin: 1em 0;
-  border: 2px solid yellowgreen;
+body .main-container .add-category-form-container h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 150%;
+}
+
+body .main-container .add-category-form-container #add_category_form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+}
+
+body .main-container .add-category-form-container #add_category_form label {
+  margin: 10px;
+  font-weight: bold;
+  font-size: 120%;
+}
+
+body .main-container .add-category-form-container #add_category_form input {
+  margin: 10px;
+}
+
+body .main-container .add-category-form-container #add_category_form #add_category_button {
+  width: 10%;
+  margin: 20px;
+}
+
+body .main-container .add-category-form-container .delete-categories ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10px;
+}
+
+body .main-container .add-category-form-container .delete-categories ul li {
+  margin: 5px;
+  border: 2px solid black;
+  background-color: #14213D;
+  border-radius: 20px;
+  padding: 10px;
+  color: white;
+}
+
+/* Footer Styles */
+footer {
+  font-family: "Rubik", sans-serif;
+  background-color: #14213D;
+  color: white;
+  border-top: 5px solid #FCA311;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  margin-top: 20px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
 /*# sourceMappingURL=mystyle.css.map */

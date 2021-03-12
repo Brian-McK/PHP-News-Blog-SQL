@@ -54,10 +54,12 @@ $statement4->closeCursor();
 
 ?>
 
-<div class="main-container">
+
     <?php
     include('includes/header.php');
     ?>
+    <div class="main-container">
+        
     <div class="main-container-header">
 
         <h1 class="tac">Categories</h1>

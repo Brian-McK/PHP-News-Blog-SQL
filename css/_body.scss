@@ -31,9 +31,8 @@
 }
 
 body {
-  background-color: $lightSlateGrey;
+  font-family: $baseFont;
   .main-container {
-    font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     margin: 0 auto;
     background-color: white;
@@ -109,6 +108,7 @@ body {
       display: flex;
       flex-wrap: wrap;
       gap: 50px 10px;
+      margin-bottom: 40px;
 
       .blog-post-item {
         margin: 0 auto;
@@ -179,9 +179,6 @@ body {
       vertical-align: top;
       text-align: left;
     }
-    form {
-      margin: 0;
-    }
     br {
       clear: left;
     }
@@ -196,20 +193,120 @@ body {
       margin-top: 1em;
     }
 
+    // add blog post styles
+
+    .form-container {
+      width: 50%;
+      margin: 0 auto;
+      padding: 30px;
+      font-family: $baseFont;
+      display: flex;
+      margin-bottom: 100px;
+
+      .pushdown {
+        margin-bottom: 30px;
+      }
+    }
+
+    .view-home-page:hover {
+      background-color: $lightSlateGrey;
+      a {
+        color: $darkNavy;
+      }
+    }
+
+    .view-home-page {
+      margin: 10px auto;
+      border: 2px solid black;
+      background-color: #14213d;
+      border-radius: 20px;
+      padding: 10px;
+      width: fit-content;
+
+      a {
+        color: white;
+      }
+    }
+
     #add_blog_post_form {
-      margin: 0.5em 0 1em;
+      margin: 0 auto;
+      padding: 30px;
+      border: 5px solid $darkYellow;
+      border-radius: 20px;
+
+      p {
+        text-align: center;
+        margin-bottom: 20px;
+      }
     }
     #add_blog_post_form label {
-      width: 6em;
-      padding-right: 1em;
-      padding-bottom: 0.5em;
+      width: 8em;
+      padding-right: 0em;
+      padding-bottom: 1.5em;
       float: left;
+      font-weight: bold;
     }
     #add_blog_post_form input {
       float: left;
     }
     #add_blog_post_form input[text] {
       width: 15em;
+    }
+
+    .add-category-form-container {
+      margin: 50px;
+      padding: 20px;
+      width: 50%;
+      margin: 40 auto;
+      border: 5px solid $darkYellow;
+      border-radius: 20px;
+
+      h1 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 150%;
+      }
+
+      #add_category_form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+
+        label {
+          margin: 10px;
+          font-weight: bold;
+          font-size: 120%;
+        }
+
+        input {
+          margin: 10px;
+        }
+
+        #add_category_button {
+          width: 10%;
+          margin: 20px;
+        }
+      }
+
+      .delete-categories {
+        ul {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding-top: 10px;
+
+          li {
+            margin: 5px;
+            border: 2px solid black;
+            background-color: $darkNavy;
+            border-radius: 20px;
+            padding: 10px;
+            color: white;
+          }
+        }
+      }
     }
   }
 }

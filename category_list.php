@@ -10,39 +10,42 @@ $categories = $statement->fetchAll();
 $statement->closeCursor();
 ?>
 <!-- the head section -->
-<div class="container">
-    <?php
-    include('includes/header.php');
-    ?>
-    <h1>Category List</h1>
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>&nbsp;</th>
-        </tr>
-        <?php foreach ($categories as $category) : ?>
-            <tr>
-                <td><?php echo $category['categoryName']; ?></td>
-                <td>
-                    <form action="delete_category.php" method="post" id="delete_product_form">
-                        <input type="hidden" name="category_id" value="<?php echo $category['categoryID']; ?>">
-                        <input type="submit" value="Delete">
-                    </form>
-                </td>
-            </tr>
-        <?php endforeach; ?>
-    </table>
-    <br>
+<?php
+include('includes/header.php');
+?>
 
-    <h2>Add Category</h2>
-    <form action="add_category.php" method="post" id="add_category_form">
+<div class="main-container">
+    <div class="main-container-header">
+        <h1 class="tac">Categories</h1>
+    </div>
+    <div class="add-category-form-container box-shadow">
+        <h1>Add Category</h1>
 
-        <label>Name:</label>
-        <input type="input" name="name" required placeholder="Enter new category name..." pattern=".{2,}" title="Category name must be greater than 2 characters">
-        <input id="add_category_button" type="submit" value="Add">
-    </form>
-    <br>
-    <p><a href="index.php">Homepage</a></p>
+        <form action="add_category.php" method="post" id="add_category_form">
+            <label>Name:</label>
+            <input type="input" size="30" name="name" required placeholder="Enter new category name..." pattern=".{2,}" title="Category name must be greater than 2 characters">
+            <input id="add_category_button" type="submit" value="Add">
+        </form>
+
+        <div class="delete-categories">
+            <nav>
+                <h1>Delete Categories</h1>
+                <ul>
+                    <?php foreach ($categories as $category) : ?>
+                        <li><?php echo $category['categoryName']; ?></li>
+                        <form action="delete_category.php" method="post" id="delete_product_form">
+                            <input type="hidden" name="category_id" value="<?php echo $category['categoryID']; ?>">
+                            <input type="submit" value="Delete">
+                        </form>
+                    <?php endforeach; ?>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="view-home-page tac font-120">
+        <a href="index.php">View Homepage</a>
+    </div>
 
     <?php
     include('includes/footer.php');

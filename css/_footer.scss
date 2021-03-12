@@ -1,13 +1,15 @@
 /* Footer Styles */
 
 footer {
-    clear: both;
-    border-top: 2px solid black;
-    border: 2px solid yellowgreen;
-}
-footer p {
-    text-align: right;
-    font-size: 80%;
-    margin: 1em 0;
-    border: 2px solid yellowgreen;
+  font-family: $baseFont;
+  background-color: $darkNavy;
+  color: white;
+  border-top: 5px solid $darkYellow;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  margin-top: 20px;
+  left: 0;
+  bottom: 0;
+  width: 100%;
 }
