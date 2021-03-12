@@ -8,4 +8,4 @@ You will require a local server such as XAMMP or MAMP with access to phpmyadmin 
 
 ## Working demo available at:
 
-[php crud news blog demo](https://mysql04.comp.dkit.ie/D00197352/)
+[php crud news blog demo](https://mysql04.comp.dkit.ie/D00197352/ca2_news_blog/index.php)
