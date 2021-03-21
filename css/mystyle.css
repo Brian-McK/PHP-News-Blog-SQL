@@ -139,6 +139,10 @@ header .fa-newspaper-o {
   box-shadow: 5px 5px 6px 1px rgba(0, 0, 0, 0.39);
 }
 
+.error-bg {
+  background-color: red !important;
+}
+
 body {
   font-family: "Rubik", sans-serif;
 }

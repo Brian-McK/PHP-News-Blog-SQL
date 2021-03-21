@@ -42,7 +42,7 @@ include('includes/header.php');
 ?>
 
 <div class="main-container">
-	<div class="main-container-header">
+	<div class="main-container-header error-bg">
 		<h1 class="tac">Something Went Wrong!</h1>
 	</div>
 	<p class="tac m-40px font-150"><?php echo nl2br($errors); ?></p>

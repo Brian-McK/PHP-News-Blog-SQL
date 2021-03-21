@@ -6,41 +6,6 @@ include('includes/header.php');
         <h1 class="tac">Contact Us</h1>
     </div>
 
-    <!-- <div class="form-container font-150">
-        <form action="add_blog_post.php" method="post" enctype="multipart/form-data" id="add_blog_post_form" class="box-shadow">
-
-            <label>Category:</label>
-            <select name="category_id" required>
-                <?php foreach ($categories as $category) : ?>
-                    <option value="<?php echo $category['categoryID']; ?>">
-                        <?php echo $category['categoryName']; ?>
-                    </option>
-                <?php endforeach; ?>
-            </select>
-            <br>
-            <label>Post Title:</label>
-            <input type="input" name="postTitle" required placeholder="Enter post title..." pattern=".{2,}" title="Post Title must be greater than 2 characters">
-            <br> -->
-
-    <!-- TODO - SHOULD HAVE A TEXTAREA HERE INSTEAD -->
-    <!-- <label>Post Body:</label>
-            <input type="input" name="postBody" required placeholder="Enter post body..." pattern=".{2,}" title="Post Body must be greater than 2 characters">
-            <br>
-
-            <label>Image:</label>
-            <input type="file" name="image" accept="image/*" />
-            <br>
-
-            <label>&nbsp;</label>
-            <input type="submit" value="Add Post">
-            <br>
-        </form>
-    </div>
-    <div class="view-home-page tac font-120">
-        <a href="index.php">View Homepage</a>
-    </div> -->
-
-
     <!-- ADDING IN CONTACT FORM -->
     <div class="form-container font-150">
 
@@ -61,6 +26,13 @@ include('includes/header.php');
         </form>
     </div>
 </div>
+
+<script language="JavaScript">
+    var frmvalidator = new Validator("contactform");
+    frmvalidator.addValidation("name", "req", "Please provide your name");
+    frmvalidator.addValidation("email", "req", "Please provide your email");
+    frmvalidator.addValidation("email", "email", "Please enter a valid email address");
+</script>
 
 
 <?php
