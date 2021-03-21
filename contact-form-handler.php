@@ -6,7 +6,7 @@ if(empty($_POST['name'])  ||
    empty($_POST['phone']) || 
    empty($_POST['message']))
 {
-    $errors .= "\n Error: all fields are required";
+    $errors .= "\n Error: All fields are required";
 }
 
 $name = $_POST['name']; 
@@ -33,21 +33,21 @@ if( empty($errors))
 	
 	mail($to,$email_subject,$email_body,$headers);
 	//redirect to the 'thank you' page
-	header('Location: contact-form-thank-you.html');
+	header('Location: contact-form-thank-you.php');
 } 
 ?>
-<!DOCTYPE HTML> 
-<html>
-<head>
-	<title>Contact form handler</title>
-</head>
 
-<body>
-<!-- This page is displayed only if there is some error -->
 <?php
-echo nl2br($errors);
+include('includes/header.php');
 ?>
 
+<div class="main-container">
+	<div class="main-container-header">
+		<h1 class="tac">Something Went Wrong!</h1>
+	</div>
+	<p class="tac m-40px font-150"><?php echo nl2br($errors); ?></p>
+</div>
 
-</body>
-</html>
+<?php
+include('includes/footer.php');
+?>
