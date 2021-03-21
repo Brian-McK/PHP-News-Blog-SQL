@@ -1,23 +1,45 @@
 /* Header Styles */
 
 header {
-    background-color: $darkNavy;
-    margin: 0;
+  background-color: $darkNavy;
+  margin: 0;
+
+  nav {
     text-align: center;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    outline: 2px solid red;
 
-    h1 {
+    .nav-middle {
+      outline: 2px solid red;
+      h1 {
         color: white;
         font-size: 200%;
         margin: 10px;
-    }
-    .fa-newspaper-o {
+      }
+      .fa-newspaper-o {
         color: white;
         font-size: 60px;
         margin: 10px;
+      }
     }
-}
 
+    .nav-right {
+      ul {
+        display: flex;
+        outline: 2px solid red;
+        li {
+          a:hover {
+            color: $darkYellow;
+          }
+          a {
+            color: white;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+}

@@ -14,6 +14,20 @@
 
 <body>
     <header>
-        <h1>My News Blog</h1>
-        <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+        <nav>
+            <div class="nav-middle">
+                <h1>My News Blog</h1>
+                <i class="fa fa-newspaper-o" aria-hidden="true"></i>
+            </div>
+            <div class="nav-right">
+                <ul class="font-150">
+                    <li><a href="index.php">Home</a></li>
+                    <!-- Add drop down for news category -->
+                    <li><a href="index.php">News</a></li>
+                    <li><a href="contact.php">Contact</a></li>
+                    <li><a href="#about">About</a></li>
+                </ul>
+            </div>
+        </nav>
+
     </header>

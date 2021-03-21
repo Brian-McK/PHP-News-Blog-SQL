@@ -81,6 +81,9 @@ input, select {
 header {
   background-color: #14213D;
   margin: 0;
+}
+
+header nav {
   text-align: center;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -95,18 +98,39 @@ header {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  outline: 2px solid red;
 }
 
-header h1 {
+header nav .nav-middle {
+  outline: 2px solid red;
+}
+
+header nav .nav-middle h1 {
   color: white;
   font-size: 200%;
   margin: 10px;
 }
 
-header .fa-newspaper-o {
+header nav .nav-middle .fa-newspaper-o {
   color: white;
   font-size: 60px;
   margin: 10px;
+}
+
+header nav .nav-right ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  outline: 2px solid red;
+}
+
+header nav .nav-right ul li a:hover {
+  color: #FCA311;
+}
+
+header nav .nav-right ul li a {
+  color: white;
+  text-decoration: none;
 }
 
 /* Body Styles */
