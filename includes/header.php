@@ -26,6 +26,9 @@
                     <li><a href="index.php">News</a></li>
                     <li><a href="contact.php">Contact</a></li>
                     <li><a href="#about">About</a></li>
+                    <li><a href="register.php">Register</a></li>
+                    <li><a href="login.php">Login</a></li>
+                    <!-- <li><a href="logout.php">Logout</a></li> -->
                 </ul>
             </div>
         </nav>
