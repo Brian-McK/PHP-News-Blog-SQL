@@ -1,4 +1,9 @@
 <?php
+/**
+ * Start the session.
+ */
+session_start();
+
 require_once('database.php');
 
 // Get category ID
@@ -67,8 +72,14 @@ $statement4->closeCursor();
         <div class="category-navigation">
             <nav>
                 <ul>
+                    <?php
+                    if(isset($_SESSION['user_id']) || isset($_SESSION['logged_in']))
+                    {
+                    ?> 
                     <li><a href="category_list.php">Manage Post Categories</a></li>
-                    <?php foreach ($categories as $category) : ?>
+                    <?php
+                    }
+                    foreach ($categories as $category) : ?>
                         <li><a href=".?category_id=<?php echo $category['categoryID']; ?>">
                                 <?php echo $category['categoryName']; ?>
                             </a>
