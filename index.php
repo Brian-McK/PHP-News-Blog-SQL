@@ -79,8 +79,6 @@ $statement4->closeCursor();
         </div>
     </div>
 
-    <h1>HELLO</h1>
-
     <h1 class="tac font-150 m-20px"><?php echo "Category: " . $category_name; ?></h1>
 
     <div class="add-blog-post tac font-120">

@@ -1,4 +1,13 @@
 <?php
+include('includes/header.php');
+?>
+
+<div class="main-container">
+    <div class="main-container-header">
+        <h1 class="tac">Register</h1>
+    </div>
+    
+<?php
 
 //register.php
 
@@ -76,13 +85,6 @@ if (isset($_POST['register'])) {
 }
 
 ?>
-<?php
-include('includes/header.php');
-?>
-<div class="main-container">
-    <div class="main-container-header">
-        <h1 class="tac">Register</h1>
-    </div>
     <div class="form-container font-150">
         <form action="register.php" method="post" id="add_blog_post_form" class="box-shadow">
             <label for="username">Username</label>
