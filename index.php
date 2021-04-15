@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Start the session.
  */
@@ -60,11 +61,11 @@ $statement4->closeCursor();
 ?>
 
 
-    <?php
-    include('includes/header.php');
-    ?>
-    <div class="main-container">
-        
+<?php
+include('includes/header.php');
+?>
+<div class="main-container">
+
     <div class="main-container-header">
 
         <h1 class="tac">Categories</h1>
@@ -73,10 +74,9 @@ $statement4->closeCursor();
             <nav>
                 <ul>
                     <?php
-                    if(isset($_SESSION['user_id']) || isset($_SESSION['logged_in']))
-                    {
-                    ?> 
-                    <li><a href="category_list.php">Manage Post Categories</a></li>
+                    if (isset($_SESSION['user_id']) || isset($_SESSION['logged_in'])) {
+                    ?>
+                        <li><a href="category_list.php">Manage Post Categories</a></li>
                     <?php
                     }
                     foreach ($categories as $category) : ?>
@@ -93,7 +93,17 @@ $statement4->closeCursor();
     <h1 class="tac font-150 m-20px"><?php echo "Category: " . $category_name; ?></h1>
 
     <div class="add-blog-post tac font-120">
-        <a href="add_blog_post_form.php">Add Blog Post</a>
+        <?php
+        if (isset($_SESSION['user_id']) || isset($_SESSION['logged_in'])) {
+        ?>
+            <a href="add_blog_post_form.php">Add Blog Post</a>
+        <?php
+        } else {
+        ?>
+            <a href="login.php">You must login to add blog posts</a>
+        <?php
+        }
+        ?>
     </div>
 
 
