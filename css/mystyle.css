@@ -150,6 +150,10 @@ header nav .nav-right ul li a {
   margin: 40px;
 }
 
+.font-16 {
+  font-size: 16px !important;
+}
+
 .font-150 {
   font-size: 150%;
 }
@@ -226,15 +230,15 @@ body .main-container .main-container-header .category-navigation nav ul li a {
   color: white;
 }
 
-body .main-container .add-blog-post:hover {
+body .main-container .button-style-1:hover {
   background-color: #E5E5E5;
 }
 
-body .main-container .add-blog-post:hover a {
+body .main-container .button-style-1:hover a {
   color: #14213D;
 }
 
-body .main-container .add-blog-post {
+body .main-container .button-style-1 {
   margin: 20px auto;
   border: 2px solid black;
   background-color: #14213d;
@@ -246,8 +250,18 @@ body .main-container .add-blog-post {
   text-align: center;
 }
 
-body .main-container .add-blog-post a {
+body .main-container .button-style-1 a {
   color: white;
+}
+
+body .main-container .input-as-button-copy {
+  color: white;
+  font-weight: bold;
+}
+
+body .main-container .input-as-button-copy:hover {
+  cursor: pointer;
+  color: #14213D;
 }
 
 body .main-container .blog-posts-container {

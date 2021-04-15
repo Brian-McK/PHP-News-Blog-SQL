@@ -92,7 +92,7 @@ include('includes/header.php');
 
     <h1 class="tac font-150 m-20px"><?php echo "Category: " . $category_name; ?></h1>
 
-    <div class="add-blog-post tac font-120">
+    <div class="button-style-1 tac font-120">
         <?php
         if (isset($_SESSION['user_id']) || isset($_SESSION['logged_in'])) {
         ?>
@@ -100,7 +100,7 @@ include('includes/header.php');
         <?php
         } else {
         ?>
-            <a href="login.php">You must login to add blog posts</a>
+            <a href="login.php">You must login to add / edit / delete blog posts</a>
         <?php
         }
         ?>
@@ -128,14 +128,26 @@ include('includes/header.php');
                         <form action="edit_blog_post_form.php" method="post" id="delete_blog_post_form">
                             <input type="hidden" name="record_id" value="<?php echo $blogPost['recordID']; ?>">
                             <input type="hidden" name="category_id" value="<?php echo $blogPost['categoryID']; ?>">
-                            <input type="submit" value="Edit">
+                            <?php
+                            if (isset($_SESSION['user_id']) || isset($_SESSION['logged_in'])) {
+                            ?>
+                                <input class="button-style-1 input-as-button-copy font-16" type="submit" value="Edit">
+                            <?php
+                            } 
+                            ?>
                         </form>
                     </div>
                     <div class="blog-post-delete">
                         <form action="delete_blog_post.php" method="post" id="delete_blog_post_form">
                             <input type="hidden" name="record_id" value="<?php echo $blogPost['recordID']; ?>">
                             <input type="hidden" name="category_id" value="<?php echo $blogPost['categoryID']; ?>">
-                            <input type="submit" value="Delete">
+                            <?php
+                            if (isset($_SESSION['user_id']) || isset($_SESSION['logged_in'])) {
+                            ?>
+                                <input class="button-style-1 input-as-button-copy font-16" type="submit" value="Delete">
+                            <?php
+                            }
+                            ?>
                         </form>
                     </div>
                 </div>
