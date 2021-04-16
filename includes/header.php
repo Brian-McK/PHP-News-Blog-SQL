@@ -34,6 +34,7 @@ session_start();
                     <?php
                     if (isset($_SESSION['user_id']) || isset($_SESSION['logged_in'])) {
                     ?>
+                        <li><a href="users_list.php">View Users</a></li> 
                         <li><a href="logout.php">Logout</a></li>
                     <?php
                     } else {
