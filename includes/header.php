@@ -31,19 +31,20 @@ session_start();
                 <ul class="font-150">
                     <li><a href="index.php">Home</a></li>
                     <li><a href="contact.php">Contact</a></li>
-                    <?php
-                    if (isset($_SESSION['user_id']) || isset($_SESSION['logged_in'])) {
-                    ?>
-                        <li><a href="users_list.php">View Users</a></li> 
-                        <li><a href="logout.php">Logout</a></li>
-                    <?php
-                    } else {
-                    ?>
+
+                    <?php if (isset($_SESSION['user_id']) || isset($_SESSION['logged_in'])) { ?>
+
+                        <?php if ($_SESSION['user_type'] == 1) { ?>
+                            <li><a href="users_list.php">View Users</a></li>
+                            <li><a href="logout.php">Logout</a></li>
+                        <?php } else { ?>
+                            <li><a href="logout.php">Logout</a></li>
+                        <?php } ?>
+
+                    <?php } else { ?>
                         <li><a href="register.php">Register</a></li>
                         <li><a href="login.php">Login</a></li>
-                    <?php
-                    }
-                    ?>
+                    <?php } ?>
                 </ul>
             </div>
         </nav>
