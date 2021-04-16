@@ -24,6 +24,7 @@ include('includes/header.php');
             <tr>
                 <th>ID</th>
                 <th>Username</th>
+                <th>User Type</th>
                 <th>Delete</th>
             </tr>
             <?php foreach ($users as $user) : ?>
@@ -32,6 +33,21 @@ include('includes/header.php');
                         <?php echo $user['id']; ?></td>
                     <td><i class="fa fa-user" aria-hidden="true"></i>
                         <?php echo $user['username']; ?></td>
+
+                    <?php
+                    if (($user['userType']) == 1) {
+                    ?>
+                        <td><i class="fa fa-lock" aria-hidden="true"></i>
+                            <?php echo "Admin"; ?></td>
+                    <?php
+                    } else {
+                    ?>
+                        <td><i class="fa fa-user" aria-hidden="true"></i>
+                            <?php echo "User"; ?></td>
+                    <?php
+                    }
+                    ?>
+
                     <td>
                         <form action="delete_user.php" method="post" id="delete_product_form">
                             <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
