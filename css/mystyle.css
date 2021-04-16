@@ -350,20 +350,6 @@ body .main-container a {
   text-decoration: none;
 }
 
-body .main-container table {
-  border: 1px solid black;
-  border-collapse: collapse;
-  border: 2px solid pink;
-}
-
-body .main-container td,
-body .main-container th {
-  border: 1px dashed black;
-  padding: 0.2em 0.5em 0.2em 0.5em;
-  vertical-align: top;
-  text-align: left;
-}
-
 body .main-container br {
   clear: left;
 }
@@ -513,6 +499,26 @@ body .main-container .add-category-form-container .delete-categories ul li {
   border-radius: 20px;
   padding: 10px;
   color: white;
+}
+
+body .main-container .table-container {
+  margin: 20px auto;
+}
+
+body .main-container .table-container .myTable {
+  width: 50%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+body .main-container .table-container .myTable td, body .main-container .table-container .myTable th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+body .main-container .table-container .myTable tr:nth-child(even) {
+  background-color: #e8e8e8;
 }
 
 /* Footer Styles */

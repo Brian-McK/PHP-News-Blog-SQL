@@ -19,26 +19,27 @@ include('includes/header.php');
         <h1 class="tac">View Users</h1>
     </div>
 
-    <table>
-        <tr>
-            <th>ID</th>
-            <th>Username</th>
-            <th>Delete</th>
-        </tr>
-        <?php foreach ($users as $user) : ?>
+    <div class="table-container">
+        <table class="myTable box-shadow">
             <tr>
-                <td><?php echo $user['id']; ?></td>
-                <td><?php echo $user['username']; ?></td>
-                <td>
-                    <form action="delete_user.php" method="post" id="delete_product_form">
-                        <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
-                        <input type="submit" value="Delete">
-                    </form>
-                </td>
+                <th>ID</th>
+                <th>Username</th>
+                <th>Delete</th>
             </tr>
-        <?php endforeach; ?>
-    </table>
-
+            <?php foreach ($users as $user) : ?>
+                <tr>
+                    <td><?php echo $user['id']; ?></td>
+                    <td><?php echo $user['username']; ?></td>
+                    <td>
+                        <form action="delete_user.php" method="post" id="delete_product_form">
+                            <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
+                            <input type="submit" value="Delete">
+                        </form>
+                    </td>
+                </tr>
+            <?php endforeach; ?>
+        </table>
+    </div>
 </div>
 
 <?php

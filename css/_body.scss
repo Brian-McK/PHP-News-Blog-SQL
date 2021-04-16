@@ -108,13 +108,11 @@ body {
       }
     }
 
-    .input-as-button-copy
-    {
+    .input-as-button-copy {
       color: white;
       font-weight: bold;
     }
-    .input-as-button-copy:hover
-    {
+    .input-as-button-copy:hover {
       cursor: pointer;
       color: $darkNavy;
     }
@@ -185,18 +183,6 @@ body {
     a {
       font-weight: bold;
       text-decoration: none;
-    }
-    table {
-      border: 1px solid black;
-      border-collapse: collapse;
-      border: 2px solid pink;
-    }
-    td,
-    th {
-      border: 1px dashed black;
-      padding: 0.2em 0.5em 0.2em 0.5em;
-      vertical-align: top;
-      text-align: left;
     }
     br {
       clear: left;
@@ -325,6 +311,26 @@ body {
             color: white;
           }
         }
+      }
+    }
+
+    .table-container {
+      margin: 20px auto;
+      .myTable {
+        width: 50%;
+        margin: 0 auto;
+        border-collapse: collapse;
+
+        td, th {
+          border: 1px solid #dddddd;
+          text-align: left;
+          padding: 8px;
+        }
+        
+        tr:nth-child(even) {
+          background-color: #e8e8e8;
+        }
+        
       }
     }
   }
