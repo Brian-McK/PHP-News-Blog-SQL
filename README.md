@@ -1,4 +1,4 @@
-# Brian McKenna CA-2
+# Brian McKenna CA-3
 
 This repository hosts a php application in the form of a news blog. Users can create create, edit & delete blog posts and categories. Feel free to download it and if there is any major issues please email me:  d00197352@student.dkit.ie
 
