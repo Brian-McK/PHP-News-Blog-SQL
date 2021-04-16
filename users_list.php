@@ -19,11 +19,20 @@ include('includes/header.php');
         <h1 class="tac">View Users</h1>
     </div>
 
-    <ul>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Username</th>
+            <th>Delete</th>
+        </tr>
         <?php foreach ($users as $user) : ?>
-            <li><?php echo $user['username']; ?></li>
+            <tr>
+                <td><?php echo $user['id']; ?></td>
+                <td><?php echo $user['username']; ?></td>
+                <td>Delete</td>
+            </tr>
         <?php endforeach; ?>
-    </ul>
+    </table>
 
 </div>
 
