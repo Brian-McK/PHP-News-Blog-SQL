@@ -73,10 +73,10 @@ include('includes/header.php');
         <div class="category-navigation">
             <nav>
                 <ul>
-                    <?php
-                    if (isset($_SESSION['user_id']) || isset($_SESSION['logged_in'])) {
-                    ?>
-                        <li><a href="category_list.php">Manage Post Categories</a></li>
+                    <?php if (isset($_SESSION['user_id']) || isset($_SESSION['logged_in'])) { ?>
+                        <?php if ($_SESSION['user_type'] == 1) { ?>
+                            <li><a href="category_list.php">Manage Post Categories</a></li>
+                        <?php } ?>
                     <?php
                     }
                     foreach ($categories as $category) : ?>
