@@ -131,9 +131,11 @@ include('includes/header.php');
                             <?php
                             if (isset($_SESSION['user_id']) || isset($_SESSION['logged_in'])) {
                             ?>
-                                <input class="button-style-1 input-as-button-copy font-16" type="submit" value="Edit">
+                                <?php if ($_SESSION['user_type'] == 1) { ?>
+                                    <input class="button-style-1 input-as-button-copy font-16" type="submit" value="Edit">
+                                <?php } ?>
                             <?php
-                            } 
+                            }
                             ?>
                         </form>
                     </div>
@@ -144,7 +146,9 @@ include('includes/header.php');
                             <?php
                             if (isset($_SESSION['user_id']) || isset($_SESSION['logged_in'])) {
                             ?>
-                                <input class="button-style-1 input-as-button-copy font-16" type="submit" value="Delete">
+                                <?php if ($_SESSION['user_type'] == 1) { ?>
+                                    <input class="button-style-1 input-as-button-copy font-16" type="submit" value="Delete">
+                                <?php } ?>
                             <?php
                             }
                             ?>
