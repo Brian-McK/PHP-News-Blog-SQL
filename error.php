@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html>
+<?php
+include('includes/header.php');
+?>
 
-<!-- the head section -->
-<head>
-    <title>My Guitar Shop</title>
-    <link rel="stylesheet" type="text/css" href="main.css">
-</head>
+<div class="main-container">
+    <div class="main-container-header">
+        <h1 class="tac">Error</h1>
+    </div>
 
-<!-- the body section -->
-<body>
-    <header><h1>My Guitar Shop</h1></header>
+    <p class="tac m-40px font-200"><?php echo $error; ?></p>
+</div>
 
-    <main>
-        <h2 class="top">Error</h2>
-        <p><?php echo $error; ?></p>
-    </main>
-
-    <footer>
-        <p>&copy; <?php echo date("Y"); ?> My Guitar Shop, Inc.</p>
-    </footer>
-</body>
-</html>
+<?php
+include('includes/footer.php');
+?>

@@ -1,6 +1,11 @@
 # Brian McKenna CA-3
 
-This repository hosts a php application in the form of a news blog. Users can create create, edit & delete blog posts and categories. Feel free to download it and if there is any major issues please email me:  d00197352@student.dkit.ie
+This repository hosts a php application in the form of a news blog. 
+The news blog is open for the public to view but they can only read the blogs.
+Users can register and add blogs but cant edit or delete blogs.
+Admins have all privileges. They are able to add blog posts, edit blog posts, remove blog posts, create blog post categories, delete categories and also delete users.
+
+Feel free to download it and if there is any major issues please email me:  d00197352@student.dkit.ie
 
 ## How to run the app
 
