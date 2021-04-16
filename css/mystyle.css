@@ -502,7 +502,7 @@ body .main-container .add-category-form-container .delete-categories ul li {
 }
 
 body .main-container .table-container {
-  margin: 20px auto;
+  margin: 40px auto;
 }
 
 body .main-container .table-container .myTable {
@@ -519,6 +519,17 @@ body .main-container .table-container .myTable td, body .main-container .table-c
 
 body .main-container .table-container .myTable tr:nth-child(even) {
   background-color: #e8e8e8;
+}
+
+body .main-container .table-container .myTable .delete-btn:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+body .main-container .table-container .myTable .delete-btn {
+  background-color: red;
+  color: white;
+  border: none;
 }
 
 /* Footer Styles */

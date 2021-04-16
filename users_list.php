@@ -28,12 +28,16 @@ include('includes/header.php');
             </tr>
             <?php foreach ($users as $user) : ?>
                 <tr>
-                    <td><?php echo $user['id']; ?></td>
-                    <td><?php echo $user['username']; ?></td>
+                    <td><i class="fa fa-hashtag" aria-hidden="true"></i>
+                        <?php echo $user['id']; ?></td>
+                    <td><i class="fa fa-user" aria-hidden="true"></i>
+                        <?php echo $user['username']; ?></td>
                     <td>
                         <form action="delete_user.php" method="post" id="delete_product_form">
                             <input type="hidden" name="user_id" value="<?php echo $user['id']; ?>">
-                            <input type="submit" value="Delete">
+                            <button type="submit" class="delete-btn">
+                                <i class="fa fa-minus-circle" aria-hidden="true"></i>
+                            </button>
                         </form>
                     </td>
                 </tr>

@@ -315,7 +315,7 @@ body {
     }
 
     .table-container {
-      margin: 20px auto;
+      margin: 40px auto;
       .myTable {
         width: 50%;
         margin: 0 auto;
@@ -330,7 +330,17 @@ body {
         tr:nth-child(even) {
           background-color: #e8e8e8;
         }
-        
+
+        .delete-btn:hover {
+          background-color: black;
+          cursor: pointer;
+        }
+
+        .delete-btn{
+          background-color: red;
+          color: white;
+          border: none;
+        }
       }
     }
   }
