@@ -5,15 +5,15 @@ header {
   margin: 0;
 
   nav {
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    outline: 2px solid red;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
 
     .nav-middle {
-      outline: 2px solid red;
+      display: flex;
+      align-items: center;
       h1 {
         color: white;
         font-size: 200%;
@@ -29,8 +29,8 @@ header {
     .nav-right {
       ul {
         display: flex;
-        outline: 2px solid red;
         li {
+          margin: 10px;
           a:hover {
             color: $darkYellow;
           }
