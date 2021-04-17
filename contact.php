@@ -17,7 +17,7 @@ include('includes/header.php');
             <input type="text" name="email">
             <br>
             <label for="phone">Enter your phone number:</label>
-            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" required placeholder="e.g 123-45-678">
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2|3}-[0-9]{4|5}" required placeholder="e.g 087-955-3432">
             <br>
             <label for='message'>Message:</label>
             <textarea name="message"></textarea>
