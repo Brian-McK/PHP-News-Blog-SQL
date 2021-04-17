@@ -79,8 +79,9 @@ if (isset($_POST['register'])) {
     //If the signup process is successful.
     if ($result) {
         //What you do here is up to you!
-        echo 'Thank you for registering with our website. Please login ';
-        echo "<a href='"."login.php"."'>here</a>";
+        echo '<p class="font-150 tac m-20px">';
+        echo 'Thank you for registering with our website. Please login ' . "<a href='"."login.php"."'>here</a>";
+        echo '</p>';
     }
 }
 

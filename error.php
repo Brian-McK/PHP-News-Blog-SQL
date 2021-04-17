@@ -3,7 +3,7 @@ include('includes/header.php');
 ?>
 
 <div class="main-container">
-    <div class="main-container-header">
+    <div class="main-container-header error-bg">
         <h1 class="tac">Error</h1>
     </div>
 
