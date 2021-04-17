@@ -78,7 +78,7 @@ $statement->bindValue(':record_id', $record_id);
 $statement->execute();
 $statement->closeCursor();
 
-// Display the Product List page
+
 include('index.php');
 }
 ?>
