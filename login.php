@@ -80,7 +80,7 @@ include('includes/header.php');
     <div class="form-container font-150">
         <form action="login.php" method="post" id="add_blog_post_form" class="box-shadow">
             <label for="username">Username</label>
-            <input type="text" id="username" name="username"><br>
+            <input type="text" id="username" name="username" pattern=".{2,}" title="Must have more than 1 character" required><br>
             <label for="password">Password</label>
             <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br>
             <input type="submit" name="login" value="Login">
