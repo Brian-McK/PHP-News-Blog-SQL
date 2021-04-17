@@ -34,9 +34,8 @@ include('includes/header.php');
             <input type="input" name="postTitle" required placeholder="Enter post title..." pattern=".{2,}" title="Post Title must be greater than 2 characters">
             <br>
 
-            <!-- TODO - SHOULD HAVE A TEXTAREA HERE INSTEAD -->
             <label>Post Body:</label>
-            <input type="input" name="postBody" required placeholder="Enter post body..." pattern=".{2,}" title="Post Body must be greater than 2 characters">
+            <textarea name="postBody" required><?php echo $blogPosts['postBody']; ?></textarea>
             <br>
 
             <label>Image:</label>
