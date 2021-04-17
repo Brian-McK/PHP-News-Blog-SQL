@@ -91,7 +91,7 @@ if (isset($_POST['register'])) {
             <label for="username">Username</label>
             <input type="text" id="username" name="username"><br>
             <label for="password">Password</label>
-            <input type="text" id="password" name="password"><br>
+            <input type="password" id="password" name="password"><br>
             <input type="submit" name="register" value="Register"></button>
         </form>
     </div>
