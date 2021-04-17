@@ -1,4 +1,19 @@
 <?php
+/**
+ * Start the session.
+ */
+session_start();
+
+/**
+ * Check if the user is logged in or the correct user type to access the page
+ */
+if(!isset($_SESSION['user_id']) || !isset($_SESSION['logged_in']) || ($_SESSION['user_type'] == 0) ){
+    //User not logged in and or not the right user type to proceed to the page. Redirect them back to the login.php page.
+    session_destroy();
+    header('Location: login.php');
+    exit;
+}
+
 require_once('database.php');
 
 // Get all categories
