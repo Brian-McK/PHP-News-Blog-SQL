@@ -82,7 +82,7 @@ include('includes/header.php');
             <label for="username">Username</label>
             <input type="text" id="username" name="username"><br>
             <label for="password">Password</label>
-            <input type="password" id="password" name="password"><br>
+            <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required><br>
             <input type="submit" name="login" value="Login">
         </form>
     </div>
