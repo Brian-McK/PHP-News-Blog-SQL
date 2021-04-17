@@ -13,12 +13,12 @@ You will require a local server such as XAMMP or MAMP with access to phpmyadmin 
 
 ## Working demo available at:
 
-[php crud news blog demo](https://mysql04.comp.dkit.ie/D00197352/ca2_news_blog/index.php)
+[php crud news blog demo](https://mysql04.comp.dkit.ie/D00197352/ca3_news_blog/index.php)
 
-Example users: 
+## User access:
 
-Admin username: admin
+Admin username: admin,
 Admin password: Admin123!?
 
-Normal User username: frank
+Normal User username: frank,
 Normal User password: Frank123!?
